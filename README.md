@@ -1,4 +1,4 @@
-### Advice: Skip to the bottom and read the issues, then decide if this is the right solution for your stream.
+### Advice: Skip to the bottom and read the issues, then decide if this is right for you.
 
 ### 1) Inject your unique bits.
 - Visit https://developer.spotify.com/dashboard/applications
@@ -34,10 +34,10 @@
 - The url is dynamic, so it won't work as a browser source unless you manually update it every hour.
 - First run requires a login, which also hinders the ability to use localhost as a browser source.
 - Checks are handled with timeouts. I'm sure that's not the best or right way to do this, but it worked.
+- Since the current iteration works as a window capture, it either requires a mask or must be placed behind the video.
 
 ## A Humble Plea
 If anyone is savvy with this stuff, I'd love some advice on how I can make url static and do authorization calls via ajax. I'd like to make this work as a browser source, but the login and ever-changing url variables are problematic.
-Most of what I built came from the spotify dev handbook over here: https://developer.spotify.com/documentation/general/guides/authorization-guide/
 
 ## Super Serious Disclaimer
 I'm happy to help troubleshoot things, but can't be held responsible if you managed to explode your computer, delete the internet, incur the wrath of spotify, etc... Use at your own risk, and most importantly, enjoy. :)
