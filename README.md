@@ -3,11 +3,11 @@
 ### 1) Inject your unique bits.
 - Visit https://developer.spotify.com/dashboard/applications
 - Make a new app.
-![Theme 1](readme_img/spoofyconfig.jpg?raw=true)
+![Theme 1](readme_img/make-an-app.jpg?raw=true)
 
 - Grab your `client id`, `secret`, and `redirect uri`
 - put them here: `config.js`
-![Theme 1](readme_img/make-an-app.jpg?raw=true)
+![Theme 1](readme_img/spoofyconfig.jpg?raw=true)
 
 ### 2)  Install them dependencies...
 - Make sure you've got node installed https://nodejs.org/en/download/
