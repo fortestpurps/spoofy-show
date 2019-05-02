@@ -27,7 +27,7 @@
 - All of the included themse are set to work at `1280x720`.
 
 ![Theme 1](/screenshot1.jpg?raw=true)
-![Theme 3](/screenshot3.jpg?raw=true)
+![Theme 3](/screenshot2.jpg?raw=true)
 
 
 ## CURRENT ISSUES
