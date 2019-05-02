@@ -1,4 +1,6 @@
-### Advice: Skip to the bottom and read the issues, then decide if this is right for you.
+![Spoofy Show](readme_img/intro.jpg?raw=true)
+
+## Setup:
 
 ### 1) Inject your unique bits.
 - Visit https://developer.spotify.com/dashboard/applications
