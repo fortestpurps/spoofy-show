@@ -1,14 +1,18 @@
 ![Spoofy Show](readme_img/intro.jpg?raw=true)
 
+This is a simple node app that displays the currently playing track in spotify. I'm sure it has other applications, but my objective was to create something that would work as a stream over/underlay.
+
 ## Setup:
 
 ### 1) Inject your unique bits.
 - Visit https://developer.spotify.com/dashboard/applications
 - Make a new app.
+
 ![Make An App](readme_img/make-an-app.jpg?raw=true)
 
 - Grab your `client id`, `secret`, and `redirect uri`
 - put them here: `config.js`
+
 ![Configure](readme_img/spoofyconfig.jpg?raw=true)
 
 ### 2)  Install them dependencies...
@@ -31,6 +35,7 @@
 - I've included a few theme files which can be swapped out in `public/index.html`.
 - Use one of those themes and/or modify it however you'd like.
 - All of the included themes are set up to work at `1280x720`.
+
 ![Theme 1](readme_img/screenshot1.jpg?raw=true)
 ![Theme 3](readme_img/screenshot2.jpg?raw=true)
 
