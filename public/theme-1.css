@@ -1,0 +1,211 @@
+/* Want to style this fella, here's where you do it! */
+
+/* Load custom font */
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Set some basics */
+html {
+  margin: 0;
+  padding: 0;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgba(51, 68, 85, 1);
+  color: rgb(255, 255, 255);
+  width: 1280px;
+  height: 720px;
+  position: relative;
+  overflow: hidden;
+}
+
+#video-box {
+  top: 0;
+  left: 50%;
+  position: absolute;
+  width: 1280px;
+  height: 720px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.25em 2em rgba(0, 0, 0, 0.75);
+  transform-origin: top left;
+  transform: scale(0.865) translateX(-50%);
+  padding: 5em;
+  text-align: center;
+  z-index: 1;
+  border-radius: 0 0 2em 2em;
+}
+
+/* Give it a fancy container */
+#spoofy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: -1em;
+  padding: 0.75em 6em;
+  transition: ease all 1s;
+  z-index: 2;
+}
+
+/* Style the track info */
+#track-artwork {
+  float: left;
+  width: 7em;
+  height: 7em;
+  margin-bottom: -3.5em;
+  box-shadow: 0 0 1em 0px rgba(0, 0, 0, 0.5);
+  border: solid 2px rgba(0, 0, 0, .75);
+  border-radius: 0.125em;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  animation: discSpin linear 30s infinite;
+  position: relative;
+}
+
+#track-artwork:before {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  top: 50%;
+  left: 50%;
+  margin: -.75em;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .75);
+  content: "";
+  border-radius: 50%;
+}
+
+#track-artwork:after {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 50%;
+  margin: -.5em;
+  background: rgba(0, 0, 0, .75);
+  content: "";
+  border-radius: 50%;
+}
+
+#track-artwork img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#track-artwork-for-background {
+  transition-delay: 0.1s;
+  transition: ease all 2s;
+  float: left;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+#track-artwork-for-background img {
+  display: block;
+  width: 116%;
+  height: 150%;
+  margin-left: -8%;
+  filter: blur(20px) brightness(0.5);
+  margin-top: -15%;
+  animation: bgDrift ease 60s infinite;
+}
+
+@keyframes bgDrift {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes discSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.track-details {
+  width: 25em;
+  height: 4em;
+  display: table;
+}
+
+.track-details-inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 1em;
+}
+
+#track-name {
+  text-align: left;
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 0.25em;
+  line-height: 1;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
+}
+
+#track-artist {
+  text-align: left;
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 1;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  opacity: 0.75;
+}
+
+/* Some basic jquery is used in the index file to fade and move the contents around between loads. These are some animation classes to help with that. */
+.fade-out {
+  opacity: 0 !important;
+}
+
+.move-up {
+  transform: translateY(-0.5em);
+}
+
+.move-down {
+  transform: translateY(0.5em);
+}
+
+.move-left {
+  transform: translateX(-0.5em);
+}
+
+.move-right {
+  transform: translateX(0.5em);
+}
+
+.scale-down {
+  transform: scale(0.9);
+}
+
+.scale-up {
+  transform: scale(1.1);
+}

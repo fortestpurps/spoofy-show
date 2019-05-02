@@ -1,0 +1,171 @@
+/* Want to style this fella, here's where you do it! */
+
+/* Load custom font */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Set some basics */
+html {
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: rgb(80, 80, 80);
+    color: rgb(255, 255, 255);
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    overflow: hidden;
+}
+
+#video-box {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+    background: rgb(44, 43, 44);
+    padding: 5em;
+    text-align: center;
+    z-index: 1;
+}
+
+
+/* Give it a fancy container */
+#spoofy {
+    width: 20em;
+    height: 4em;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    transition: ease all 1s;
+    z-index: 2;
+    border-radius: 1em;
+}
+
+#spoofy:before {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    font-size: 3em;
+    padding: .18em .2em;
+    line-height: 1;
+    content: "♫";
+    padding: .18em .2em;
+    animation: Bounce ease 2s infinite;
+}
+
+/* Style the track info */
+#track-artwork {
+    float: left;
+    width: 100%;
+    height: 100%;
+    /* animation: discSpin linear 30s infinite; */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#track-artwork img {
+    display: block;
+    width: 60%;
+    height: 150%;
+    margin: -5% 0 0 -5%;
+    filter: blur(30px) brightness(50%);
+    opacity: .5;
+}
+
+#track-artwork-for-background {
+    display: none;
+}
+
+@keyframes Bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.track-details {
+    width: 25em;
+    height: 4em;
+    padding-left: 3.5em;
+    display: table;
+    position: absolute;
+    z-index: 2;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.track-details-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#track-name {
+    text-align: left;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin-bottom: 0.25em;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    letter-spacing: 1px;
+}
+
+#track-artist {
+    text-align: left;
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    opacity: 0.75;
+}
+
+/* Some basic jquery is used in the index file to fade and move the contents around between loads. These are some animation classes to help with that. */
+.fade-out {
+    opacity: 0 !important;
+}
+
+.move-up {
+    transform: translateY(-0.5em);
+}
+
+.move-down {
+    transform: translateY(0.5em);
+}
+
+.move-left {
+    transform: translateX(-0.5em);
+}
+
+.move-right {
+    transform: translateX(0.5em);
+}
+
+.scale-down {
+    transform: scale(0.9);
+}
+
+.scale-up {
+    transform: scale(1.1);
+}

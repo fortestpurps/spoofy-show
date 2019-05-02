@@ -1,0 +1,1 @@
+npm i -S express request cors querystring cookie-parser spotify-web-api-node
