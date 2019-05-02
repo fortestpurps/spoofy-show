@@ -8,7 +8,7 @@
 
 ### 2)  Install them dependencies...
 - Make sure you've got node installed https://nodejs.org/en/download/
-- Run `npm i -S cookie-parser cors express querystring request spotify-web-api-node` from inside the folder or `_installDependencies.bat`.
+- Run `npm i -S cookie-parser cors express querystring request spotify-web-api-node` from inside the folder or `_installDependencies.bat` if you're on windows.
 
 ### 3)  Start 'er up!
 - Make sure you have a song playing (or paused) on your Spotify account.
@@ -17,14 +17,14 @@
 ### 4) Using with OBS
 - Pop open your browser and visit http://localhost:8888 (port can be changed in `config.js`)
 - First time will direct you to log in and authorize.
-- Suggestion: Move that browser to a virtual monitor and maximize it.
+- Suggestion: Move that window to a virtual monitor and maximize it.
 - Open OBS and make a new `Window Capture` object.
-- Select the browser you made. Move, resize and/or crop as needed.
-- And that's it. As long as the server is running, the browser should continue to display the spotify info.
+- Select the browser running localhost. Move, resize and/or crop as needed.
+- And that's it. As long as the server is running and the browser doesn't change size, your stream should show the spotify info.
 
 ### 4a) Customizing
 - I've included a few theme files which can be swapped out in `public/index.html`. Pretty basic css stuff which should be self explainatory if you made it this far. Use one of those themes and/or modify it however you'd like.
-- All of the included themse are set to work at `1280x720`.
+- All of the included themse are set up to work at `1280x720`.
 
 ![Theme 1](/screenshot1.jpg?raw=true)
 ![Theme 3](/screenshot2.jpg?raw=true)
