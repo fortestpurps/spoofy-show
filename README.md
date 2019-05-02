@@ -3,11 +3,11 @@
 ### 1) Inject your unique bits.
 - Visit https://developer.spotify.com/dashboard/applications
 - Make a new app.
-![Theme 1](readme_img/make-an-app.jpg?raw=true)
+![Make An App](readme_img/make-an-app.jpg?raw=true)
 
 - Grab your `client id`, `secret`, and `redirect uri`
 - put them here: `config.js`
-![Theme 1](readme_img/spoofyconfig.jpg?raw=true)
+![Configure](readme_img/spoofyconfig.jpg?raw=true)
 
 ### 2)  Install them dependencies...
 - Make sure you've got node installed https://nodejs.org/en/download/
@@ -26,9 +26,9 @@
 - And that's it. As long as the server is running and the browser doesn't change size, your stream should show the spotify info.
 
 ### 4a) Customizing
-- I've included a few theme files which can be swapped out in `public/index.html`. Pretty basic css stuff which should be self explainatory if you made it this far. Use one of those themes and/or modify it however you'd like.
-- All of the included themse are set up to work at `1280x720`.
-
+- I've included a few theme files which can be swapped out in `public/index.html`.
+- Use one of those themes and/or modify it however you'd like.
+- All of the included themes are set up to work at `1280x720`.
 ![Theme 1](readme_img/screenshot1.jpg?raw=true)
 ![Theme 3](readme_img/screenshot2.jpg?raw=true)
 
