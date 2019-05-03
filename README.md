@@ -22,14 +22,12 @@ This is a simple node app that displays the currently playing track in spotify. 
 ## Running the App
 - Make sure you have a song playing (or paused) on your Spotify account.
 - Run `node app.js` from inside the folder or `_startSpoofy.bat`.
-
-## Using with OBS
 - Pop open your browser and visit http://localhost:8888 (port can be changed in `config.js`)
 - First time will direct you to log in and authorize.
-- Suggestion: Move that window to a virtual monitor and maximize it.
+
+## Using with OBS
 - Open OBS and make a new `Window Capture` object.
 - Select the browser running localhost. Move, resize and/or crop as needed.
-- And that's it. As long as the server is running and the browser doesn't change size, your stream should show the spotify info.
 
 ## Customizing
 - I've included a few theme files which can be swapped out in `public/index.html`.
