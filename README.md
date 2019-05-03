@@ -1,28 +1,23 @@
-![Spoofy Show](readme_img/intro.jpg?raw=true)
-
-This is a simple node app that displays the currently playing track in spotify. I'm sure it has other applications, but my objective was to create something that would work as a stream over/underlay.
+![Themes](readme_img/customization.jpg?raw=true)
 
 ## First Time Setup:
 
 ### 1) Inject your unique bits.
 - Visit https://developer.spotify.com/dashboard/applications
 - Make a new app.
-
-![Make An App](readme_img/make-an-app.jpg?raw=true)
-
-- Grab your `client id`, `secret`, and `redirect uri`
-- put them here: `config.js`
+- Set the `redirect uri` to `http://localhost:8888/callback`
+- Grab your `client id`, `secret`, and put that info into `config.js`
 
 ![Configure](readme_img/spoofyconfig.jpg?raw=true)
 
 ### 2)  Install them dependencies...
 - Make sure you've got node installed https://nodejs.org/en/download/
-- Run `npm i -S cookie-parser cors express querystring request spotify-web-api-node` from inside the folder or `_installDependencies.bat` if you're on windows.
+- Run `npm i -S cookie-parser cors express querystring request spotify-web-api-node` from inside the folder or `_installDependencies.bat`.
 
 ## Running the App
 - Make sure you have a song playing (or paused) on your Spotify account.
 - Run `node app.js` from inside the folder or `_startSpoofy.bat`.
-- Pop open your browser and visit http://localhost:8888 (port can be changed in `config.js`)
+- Pop open your browser and visit http://localhost:8888
 - First time will direct you to log in and authorize.
 
 ## Using with OBS
@@ -32,20 +27,13 @@ This is a simple node app that displays the currently playing track in spotify. 
 ## Customizing
 - I've included a few theme files which can be swapped out in `public/index.html`.
 - Use one of those themes and/or modify it however you'd like.
-- All of the included themes are set up to work at `1280x720`.
 
-![Theme 1](readme_img/screenshot1.jpg?raw=true)
-![Theme 3](readme_img/screenshot2.jpg?raw=true)
+![Themes](readme_img/customization.jpg?raw=true)
 
 
 ## CURRENT ISSUES
-- The url is dynamic, so it won't work as a browser source unless you manually update it every hour.
 - First run requires a login, which also hinders the ability to use localhost as a browser source.
-- Checks are handled with timeouts. I'm sure that's not the best or right way to do this, but it worked.
-- Since the current iteration works as a window capture, it either requires a mask or must be placed behind the video.
-
-## A Humble Plea
-If anyone is savvy with this stuff, I'd love some advice on how I can make url static and do authorization calls via ajax. I'd like to make this work as a browser source, but the login and ever-changing url variables are problematic.
+- Since the current iteration works as a window capture, it either requires a mask or must be placed under the video layer(s).
 
 ## Super Serious Disclaimer
 I'm happy to help troubleshoot things, but can't be held responsible if you managed to explode your computer, delete the internet, incur the wrath of spotify, etc... Use at your own risk, and most importantly, enjoy. :)

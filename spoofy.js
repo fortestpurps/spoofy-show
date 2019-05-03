@@ -30,11 +30,24 @@ var stateKey = "spotify_auth_state";
 
 // Start the app container
 var app = express();
+var allowedOrigins = 'http://localhost:' + port;
 
 app
   .use(express.static(__dirname + "/public"))
-  .use(cors())
+  .use(cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        var msg = 'The CORS policy for this site does not ' +
+          'allow access from the specified Origin.';
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    }
+  }))
   .use(cookieParser());
+
+
 
 
 
@@ -101,8 +114,8 @@ app.get("/callback", function (req, res) {
 
         // Use the access token to access the Spoofy
         request.get(options, function (error, response, body) {
-          console.log(response);
-          send(response);
+          // console.log(error);
+          // send(response);
           // SEND THIS DATA TO THE INDEX (not currently working)
         });
 
@@ -114,6 +127,10 @@ app.get("/callback", function (req, res) {
             refresh_token: refresh_token
           })
         );
+
+
+
+
       } else {
         res.redirect(
           "/#" +
@@ -141,6 +158,8 @@ app.get("/refresh_token", function (req, res) {
     },
     json: true
   };
+
+
 
   request.post(authOptions, function (error, response, body) {
     if (!error && response.statusCode === 200) {
