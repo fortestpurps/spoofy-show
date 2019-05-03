@@ -1,0 +1,87 @@
+// Grab a fresh token every hour by redirecting to the login page to trigger the request functions
+setTimeout(function () {
+    console.log("get a new token");
+    window.location.href = "/login";
+}, 3550000); // Slightly less than an hour
+
+// Use the tokens to generate, display and refresh data
+(function () {
+
+    function getHashParams() {
+        var hashParams = {};
+        var e,
+            r = /([^&;=]+)=?([^&;]*)/g,
+            q = window.location.hash.substring(1);
+        while ((e = r.exec(q))) {
+            hashParams[e[1]] = decodeURIComponent(e[2]);
+        }
+        return hashParams;
+    }
+
+    var params = getHashParams();
+    var access_token = params.access_token,
+        refresh_token = params.refresh_token,
+        error = params.error;
+    if (error) {
+        alert("There was an error during the authentication");
+    } else {
+        if (access_token) {
+            console.log(access_token);
+
+            let currentPlay;
+
+            setInterval(function () {
+                $.ajax({
+                    url: "https://api.spotify.com/v1/me/player/currently-playing",
+                    headers: {
+                        Authorization: "Bearer " + access_token
+                    },
+                    success: function (response) {
+                        if (currentPlay === response.item.id) {
+                            console.log("no change detected");
+                        } else {
+                            console.log("change detected, update ID");
+                            console.log(currentPlay);
+                            currentPlay = response.item.id;
+                            console.log(response.item.id);
+
+                            $("#spoofy, #track-artwork-for-background").addClass(
+                                "fade-out"
+                            );
+                            $("#spoofy").addClass("move-up");
+
+                            setTimeout(function () {
+                                $("#spoofy").removeClass("move-up");
+                                $("#spoofy").addClass("move-down");
+                            }, 1000);
+
+                            setTimeout(function () {
+                                (document.getElementById("track-name").innerHTML =
+                                    response.item.name),
+                                (document.getElementById("track-artist").innerHTML =
+                                    response.item.artists[0].name),
+                                (document.getElementById("track-artwork").innerHTML =
+                                    "<img src='" +
+                                    response.item.album.images[2].url +
+                                    "'>"),
+                                (document.getElementById(
+                                        "track-artwork-for-background"
+                                    ).innerHTML =
+                                    "<img src='" +
+                                    response.item.album.images[2].url +
+                                    "'>");
+                                $("#spoofy").removeClass("move-down");
+                                $("#spoofy, #track-artwork-for-background").removeClass(
+                                    "fade-out"
+                                );
+                            }, 2000);
+                        }
+                    }
+                });
+                console.log("song check");
+            }, 3000);
+        } else {
+            window.location.href = "/login";
+        }
+    }
+})();
