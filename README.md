@@ -28,9 +28,6 @@
 - I've included a few theme files which can be swapped out in `public/index.html`.
 - Use one of those themes and/or modify it however you'd like.
 
-![Themes](readme_img/customization.jpg?raw=true)
-
-
 ## CURRENT ISSUES
 - First run requires a login, which also hinders the ability to use localhost as a browser source.
 - Since the current iteration works as a window capture, it either requires a mask or must be placed under the video layer(s).
