@@ -1,4 +1,4 @@
-![Themes](readme_img/customization.jpg?raw=true)
+[![Video](readme_img/spoofy-video.jpg)](https://www.youtube.com/watch?v=q6wCIXFtSf0?vq=hd1080)
 
 ## First Time Setup:
 
@@ -27,6 +27,8 @@
 ## Customizing
 - I've included a few theme files which can be swapped out in `public/index.html`.
 - Use one of those themes and/or modify it however you'd like.
+
+![Themes](readme_img/customization.jpg?raw=true)
 
 ## CURRENT ISSUES
 - First run requires a login, which also hinders the ability to use localhost as a browser source.
