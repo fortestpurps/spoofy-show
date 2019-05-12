@@ -16,7 +16,7 @@
 
 ## Running the App
 - Make sure you have a song playing (or paused) on your Spotify account.
-- Run `node app.js` from inside the folder or `_startSpoofy.bat`.
+- Run `node spoofy.js` from inside the folder or `_startSpoofy.bat`.
 - Pop open your browser and visit http://localhost:8888
 - First time will direct you to log in and authorize.
 
