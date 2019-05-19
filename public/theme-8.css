@@ -25,7 +25,7 @@ body {
   height: 720px;
   position: relative;
   overflow: hidden;
-  background: rgb(30, 30, 30);
+  background: rgb(190, 80, 20);
 }
 
 #video-box {
@@ -34,18 +34,19 @@ body {
 
 /* Give it a fancy container */
 #spoofy {
-  position: absolute;
   top: 1em;
   left: 1em;
+  position: absolute;
+  width: 8em;
+  height: 8em;
   transition: ease all 1s;
   z-index: 2;
 }
 
 /* Style the track info */
 #track-artwork {
-  float: left;
-  width: 5em;
-  height: 5em;
+  width: 8em;
+  height: 8em;
   overflow: hidden;
   position: relative;
 }
@@ -61,39 +62,49 @@ body {
 }
 
 .track-details {
-  height: 5em;
-  width: auto;
-  display: table;
-  background: rgb(0, 0, 0);
+  width: 8em;
+  display: block;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .track-details-inner {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 1em;
+  width: 100%;
+  overflow: hidden;
+  padding: 1em 0 0.25em;
+  box-sizing: content-box;
 }
 
-#track-name {
-  text-align: left;
-  font-size: 1.5em;
-  font-weight: 500;
-  margin-bottom: 0.25em;
-  line-height: 1;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
-  letter-spacing: 1px;
-}
-
+#track-name,
 #track-artist {
-  text-align: left;
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
-  opacity: 0.75;
+  display: none;
 }
 
 #track-info-repeater {
-  display: none;
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: content-box;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 60s;
+  color: white;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(-26.2%);
+  }
+  100% {
+    transform: translateX(-76.4%);
+  }
 }

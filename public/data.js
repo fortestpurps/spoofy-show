@@ -55,15 +55,30 @@ setTimeout(function () {
                                 $("#spoofy").addClass("move-down");
                             }, 1000);
 
+                            // Quick and dirty way to get a bunch of repeating names for the scrolling elements
+                            let repeatingName =
+                            response.item.name + " - " + response.item.artists[0].name + " - " +
+                            response.item.name + " - " + response.item.artists[0].name + " - " + 
+                            response.item.name + " - " + response.item.artists[0].name + " - " + 
+                            response.item.name + " - " + response.item.artists[0].name + " - " + response.item.name + " - " + response.item.artists[0].name + " - " +
+                            response.item.name + " - " + response.item.artists[0].name + " - " + 
+                            response.item.name + " - " + response.item.artists[0].name + " - " + 
+                            response.item.name + " - " + response.item.artists[0].name + " - ";
+
                             setTimeout(function () {
+                                (document.getElementById("track-info-repeater").innerHTML = repeatingName),
+
                                 (document.getElementById("track-name").innerHTML =
                                     response.item.name),
+
                                 (document.getElementById("track-artist").innerHTML =
                                     response.item.artists[0].name),
+
                                 (document.getElementById("track-artwork").innerHTML =
                                     "<img src='" +
-                                    response.item.album.images[2].url +
+                                    response.item.album.images[1].url +
                                     "'>"),
+
                                 (document.getElementById(
                                         "track-artwork-for-background"
                                     ).innerHTML =

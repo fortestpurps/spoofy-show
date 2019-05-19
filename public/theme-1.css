@@ -1,5 +1,3 @@
-/* Want to style this fella, here's where you do it! */
-
 /* Load custom font */
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
@@ -65,7 +63,7 @@ body {
   height: 7em;
   margin-bottom: -3.5em;
   box-shadow: 0 0 1em 0px rgba(0, 0, 0, 0.5);
-  border: solid 2px rgba(0, 0, 0, .75);
+  border: solid 2px rgba(0, 0, 0, 0.75);
   border-radius: 0.125em;
   overflow: hidden;
   background: rgb(0, 0, 0);
@@ -80,8 +78,8 @@ body {
   height: 1.5em;
   top: 50%;
   left: 50%;
-  margin: -.75em;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, .75);
+  margin: -0.75em;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
   content: "";
   border-radius: 50%;
 }
@@ -92,8 +90,8 @@ body {
   height: 1em;
   top: 50%;
   left: 50%;
-  margin: -.5em;
-  background: rgba(0, 0, 0, .75);
+  margin: -0.5em;
+  background: rgba(0, 0, 0, 0.75);
   content: "";
   border-radius: 50%;
 }
@@ -181,31 +179,6 @@ body {
   opacity: 0.75;
 }
 
-/* Some basic jquery is used in the index file to fade and move the contents around between loads. These are some animation classes to help with that. */
-.fade-out {
-  opacity: 0 !important;
-}
-
-.move-up {
-  transform: translateY(-0.5em);
-}
-
-.move-down {
-  transform: translateY(0.5em);
-}
-
-.move-left {
-  transform: translateX(-0.5em);
-}
-
-.move-right {
-  transform: translateX(0.5em);
-}
-
-.scale-down {
-  transform: scale(0.9);
-}
-
-.scale-up {
-  transform: scale(1.1);
+#track-info-repeater {
+  display: none;
 }

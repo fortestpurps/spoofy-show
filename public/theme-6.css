@@ -1,133 +1,105 @@
-/* Want to style this fella, here's where you do it! */
-
 /* Load custom font */
 @import url("https://fonts.googleapis.com/css?family=VT323");
 
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Set some basics */
 html {
-    margin: 0;
-    padding: 0;
-    width: 1280px;
-    height: 720px;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
 }
 
 body {
-    font-size: 16px;
-    font-family: "VT323", sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 1280px;
-    height: 720px;
-    position: relative;
-    overflow: hidden;
-    background: rgb(39, 29, 41);
+  font-size: 16px;
+  font-family: "VT323", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 1280px;
+  height: 720px;
+  position: relative;
+  overflow: hidden;
+  background: rgb(39, 29, 41);
 }
 
 #video-box {
-    display: none;
+  display: none;
 }
 
 /* Give it a fancy container */
 #spoofy {
-    top: 1em;
-    left: 1em;
-    transition: ease all 1s;
-    z-index: 2;
-    height: 5em;
-    display: table;
-    position: absolute;
+  top: 1em;
+  left: 1em;
+  transition: ease all 1s;
+  z-index: 2;
+  height: 5em;
+  display: table;
+  position: absolute;
 }
 
 /* Style the track info */
 #track-artwork {
-    float: left;
-    width: 3em;
-    height: 3em;
-    overflow: hidden;
-    position: relative;
-    border-radius: 5em 0 5em 5em;
+  float: left;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5em 0 5em 5em;
 }
 
-
 #track-artwork img {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #track-artwork-for-background {
-    display: none
+  display: none;
 }
 
 .track-details {
-    height: 2em;
-    display: table;
-    width: auto;
-    background: rgb(79, 3, 109);
-    border-radius: 0 5em 5em 0;
+  height: 2em;
+  display: table;
+  width: auto;
+  background: rgb(79, 3, 109);
+  border-radius: 0 5em 5em 0;
 }
 
 .track-details-inner {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0 1em;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 1em;
 }
 
 #track-name {
-    text-align: left;
-    font-size: 1.5em;
-    font-weight: 500;
-    line-height: 1;
-    color: rgb(174, 250, 186);
-    text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
-    letter-spacing: 1px;
-    float: left;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1;
+  color: rgb(174, 250, 186);
+  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
+  float: left;
 }
 
 #track-artist {
-    text-align: left;
-    font-size: 1em;
-    font-weight: 500;
-    line-height: 1;
-    color: rgb(174, 250, 186);
-    text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
-    opacity: .75;
-    float: left;
-    padding: .35em 0 0 1em;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1;
+  color: rgb(174, 250, 186);
+  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  opacity: 0.75;
+  float: left;
+  padding: 0.35em 0 0 1em;
 }
 
-/* Some basic jquery is used in the index file to fade and move the contents around between loads. These are some animation classes to help with that. */
-.fade-out {
-    opacity: 0 !important;
-}
-
-.move-up {
-    transform: translateY(-0.5em);
-}
-
-.move-down {
-    transform: translateY(0.5em);
-}
-
-.move-left {
-    transform: translateX(-0.5em);
-}
-
-.move-right {
-    transform: translateX(0.5em);
-}
-
-.scale-down {
-    transform: scale(0.9);
-}
-
-.scale-up {
-    transform: scale(1.1);
+#track-info-repeater {
+  display: none;
 }

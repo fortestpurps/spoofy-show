@@ -1,0 +1,158 @@
+/* Load custom font */
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Set some basics */
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgb(67, 123, 131);
+  color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+/* Give it a fancy container */
+#spoofy {
+  position: absolute;
+  top: 1em;
+  left: 2em;
+  transition: ease all 1s;
+  z-index: 2;
+  width: 8em;
+  height: 8em;
+}
+
+/* Style the track info */
+#track-artwork {
+  float: left;
+  width: 8em;
+  height: 8em;
+  margin-bottom: -4em;
+  border: solid 2px rgba(0, 0, 0, 0.75);
+  border-radius: 0.125em;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  animation: discSpin linear 50s infinite;
+  position: relative;
+}
+
+#track-artwork img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#track-artwork-for-background {
+  display: none;
+}
+
+@keyframes bgDrift {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes discSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.track-details {
+  position: absolute;
+  top: 50%;
+  left: -1em;
+  width: 10em;
+  border-radius: 5em;
+
+  transform: translateY(-50%);
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.track-details:before,
+.track-details:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.track-details:after {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  left: auto;
+  right: 0;
+}
+
+.track-details-inner {
+  width: 100%;
+  overflow: hidden;
+  padding: 0.25em;
+  box-sizing: content-box;
+}
+
+#track-name,
+#track-artist {
+  display: none;
+}
+
+#track-info-repeater {
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: content-box;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 60s;
+  color: white;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(-26.2%);
+  }
+  100% {
+    transform: translateX(-76.4%);
+  }
+}
