@@ -3,23 +3,94 @@
   <head>
     <title>Spoofy Display for Stream Overlay</title>
 
-    <link rel="stylesheet" href="theme-custom.css" />
-    <!-- <link rel="stylesheet" href="theme-1.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-2.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-3.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-4.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-5.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-6.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-7.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-8.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-9.css" /> -->
-    <!-- <link rel="stylesheet" href="theme-10.css" /> -->
+    <!-- A few lines of css to normalize things across browsers. -->
+    <link rel="stylesheet" href="css/normalize.css" />
 
-    <link rel="stylesheet" href="transitions.css" />
-    <link rel="shortcut icon" href="favicon.svg" />
+    <!-- This file has some basic transition classes for switching songs. -->
+    <link rel="stylesheet" href="css/transitions.css" />
+
+    <!-- Edit this line to select one of the premade theme options. -->
+    <link rel="stylesheet" href="css/theme-starter.css" />
+
+    <link rel="shortcut icon" href="#" />
   </head>
 
   <body>
+    <!-- This is forced to show in theme-basic.css -->
+    <div class="spoofy-info" style="display:none;">
+      <strong>It works!</strong>
+      <p>
+        You are currently using theme-starter.css, a base template designed to
+        show the available pieces with minimal styling. It includes album art,
+        the song and artist, as well as other elements that may be useful in the
+        context of streaming. To use a different theme, edit line 12 in
+        public/index.html.
+      </p>
+
+      <p>
+        If you have knowledge of CSS, I highly encourage customizing this app to
+        suit your needs.
+      </p>
+
+      <strong>Available Themes:</strong>
+      <ul>
+        <li>
+          <strong>"theme-starter.css"</strong><br />A basic display of the
+          available elements, built to be customized.
+        </li>
+        <li>
+          <strong>"theme-1.css"</strong><br />Album art is displayed as a
+          spinning disc with the track information off to the side.
+        </li>
+        <li>
+          <strong>"theme-2.css"</strong><br />Album art is used to give a hint
+          of color to a box with a floating music note and the track
+          information.
+        </li>
+        <li>
+          <strong>"theme-3.css"</strong><br />The album art is placed in a
+          circle with a pulsing music note below and track information stacked
+          vertically underneath that.
+        </li>
+        <li>
+          <strong>"theme-4.css"</strong><br />A dynamically scaling box with the
+          album art on the left and track information on the right.
+        </li>
+        <li>
+          <strong>"theme-5.css"</strong><br />A pill shaped vertical layout.
+        </li>
+        <li>
+          <strong>"theme-6.css"</strong><br />A retro purple and green shape
+          with pixelated fonts.
+        </li>
+        <li>
+          <strong>"theme-7.css"</strong><br />Prominent album art displayed
+          above scrolling track information.
+        </li>
+        <li>
+          <strong>"theme-8.css"</strong><br />Track information scrolls across
+          the bottom of a square album image.
+        </li>
+        <li>
+          <strong>"theme-9.css"</strong><br />A Saturn-like layout where the
+          song information scrolls across the 'ring' and the album artwork spins
+          in the center.
+        </li>
+        <li>
+          <strong>"theme-10.css"</strong><br />Scrolling track information
+          displayed over a band of color generated from album artwork.
+        </li>
+        <li>
+          <strong>"theme-11.css"</strong><br />A large circle with album art,
+          crossed by a diagonal scrolling bar of track information..
+        </li>
+        <li>
+          <strong>"theme-12.css, 13, 14, 15"</strong><br />Vertical and
+          horizontal scrolling track information in white and black.
+        </li>
+      </ul>
+    </div>
+
     <div id="spoofy">
       <div id="track-artwork"></div>
       <div class="track-details">
@@ -30,8 +101,8 @@
         </div>
       </div>
     </div>
-    <div id="video-box"></div>
-    <div id="track-artwork-for-background"></div>
+
+    <div id="track-artwork-for-background" class="hidden"></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="data.js"></script>

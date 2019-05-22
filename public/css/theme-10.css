@@ -1,0 +1,111 @@
+/* Load custom font */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+#spoofy {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  transition: ease all 1s;
+  z-index: 2;
+  width: 16em;
+  height: 3em;
+  overflow: hidden;
+  border-radius: 0.25em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#track-artwork {
+  position: absolute;
+  top: -6em;
+  width: 18em;
+  height: 18em;
+  margin-bottom: -5em;
+  overflow: hidden;
+  animation: discSpin linear 90s infinite;
+  left: -2em;
+  filter: blur(5px) brightness(70%);
+}
+
+#track-artwork img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes discSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.track-details {
+  position: absolute;
+  top: 50%;
+  left: 0em;
+  width: 100%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.track-details:before,
+.track-details:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.track-details:after {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  left: auto;
+  right: 0;
+}
+
+.track-details-inner {
+  width: 100%;
+  overflow: hidden;
+  padding: 0.65em 0;
+  box-sizing: content-box;
+}
+
+#track-name,
+#track-artist {
+  display: none;
+}
+
+#track-info-repeater {
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: content-box;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 120s;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(-26.2%);
+  }
+  100% {
+    transform: translateX(-76.4%);
+  }
+}

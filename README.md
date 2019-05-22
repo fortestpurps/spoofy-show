@@ -2,6 +2,8 @@
 
 [![Video](readme_img/spoofy-video.jpg)](https://www.youtube.com/watch?v=q6wCIXFtSf0?vq=hd1080)
 
+### NOTE: This video is outdated, but still accurate enough to use for the general setup.
+
 ## First Time Setup:
 
 The following two steps and spotify authorization only have to happen once. After that, you can start the app by running `node spoofy.js` or `_startSpoofy.bat`.
@@ -17,7 +19,7 @@ The following two steps and spotify authorization only have to happen once. Afte
 
 ### 2) Install them dependencies...
 
-- Make sure you've got node installed https://nodejs.org/en/download/
+- Stick node on your machine: https://nodejs.org/en/download/
 - Run `npm i -S cookie-parser cors express querystring request spotify-web-api-node` from inside the folder or `_installDependencies.bat`.
 
 ## Running the App
@@ -27,11 +29,6 @@ The following two steps and spotify authorization only have to happen once. Afte
 - Pop open your browser and visit http://localhost:8888
 - First time will direct you to log in and authorize.
 
-## Using with OBS
-
-- Open OBS and make a new `Window Capture` object.
-- Select the browser running localhost. Move, resize and/or crop as needed.
-
 ## Customizing
 
 - I've included a few theme files which can be swapped out in `public/index.html`.
@@ -39,9 +36,12 @@ The following two steps and spotify authorization only have to happen once. Afte
 
 ![Themes](readme_img/customization.jpg?raw=true)
 
-## CURRENT ISSUES
+## Using with OBS
 
-- This only works as a windows capture in streaming software since the first run requires authorization.
+- With spoofy and spotify running, Open OBS and make a new `Browser` source.
+- Set the `URL` to `http://localhost:8888`.
+- To sign into spotify (first time setup), right click on this new source, then click `interact` towards the bottom of the context menu.
+- Once you're in, move, resize and/or crop as needed.
 
 ## Super Serious Disclaimer
 

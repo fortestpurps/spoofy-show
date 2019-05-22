@@ -1,0 +1,112 @@
+/* Load custom font */
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+#spoofy {
+  position: absolute;
+  top: 1em;
+  left: 2em;
+  transition: ease all 1s;
+  z-index: 2;
+  width: 8em;
+  height: 8em;
+  font-family: "Nunito", sans-serif;
+}
+
+#track-artwork {
+  float: left;
+  width: 8em;
+  height: 8em;
+  margin-bottom: -4em;
+  border: solid 2px rgba(0, 0, 0, 1);
+  border-radius: 0.125em;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  animation: discSpin linear 50s infinite;
+  position: relative;
+}
+
+#track-artwork img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes discSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.track-details {
+  position: absolute;
+  top: 50%;
+  left: -1em;
+  width: 10em;
+  border-radius: 5em;
+
+  transform: translateY(-50%);
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.track-details:before,
+.track-details:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.track-details:after {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  left: auto;
+  right: 0;
+}
+
+.track-details-inner {
+  width: 100%;
+  overflow: hidden;
+  padding: 0.25em;
+  box-sizing: content-box;
+}
+
+#track-name,
+#track-artist {
+  display: none;
+}
+
+#track-info-repeater {
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: content-box;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 120s;
+  color: white;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(-26.2%);
+  }
+  100% {
+    transform: translateX(-76.4%);
+  }
+}

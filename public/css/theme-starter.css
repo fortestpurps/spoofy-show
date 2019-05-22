@@ -1,0 +1,97 @@
+/* Load custom font */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+.spoofy-info {
+  display: block !important;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  margin-bottom: 2em;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  line-height: 1.5;
+  padding: 2em;
+  border-radius: 1em;
+  width: 40em;
+  font-size: 0.875em;
+  font-family: "Open Sans", sans-serif;
+}
+.spoofy-info li {
+  margin-bottom: 1em;
+}
+
+#spoofy {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+#track-artwork {
+  width: 25em;
+  height: 25em;
+}
+
+#track-artwork img {
+  display: block;
+  width: 100%;
+}
+
+.track-details {
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.track-details-inner {
+  width: 23em;
+  overflow: hidden;
+}
+
+#track-name {
+  font-size: 1.5em;
+}
+
+#track-artist {
+  font-size: 1.25em;
+  opacity: 0.8;
+  padding-bottom: 1em;
+}
+
+#track-info-repeater {
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: content-box;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 120s;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(-26.2%);
+  }
+  100% {
+    transform: translateX(-76.4%);
+  }
+}
+
+#track-artwork-for-background {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(10px) brightness(50%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#track-artwork-for-background img {
+  width: 120vw;
+  height: 120vh;
+  margin: -10vh 0 0 -10vw;
+  background-position: 0 0;
+  filter: blur(10px), brightness(10%);
+}

@@ -1,0 +1,44 @@
+/* Load custom font */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+#spoofy {
+  top: 1em;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+#track-artwork {
+  display: none;
+}
+
+.track-details {
+  width: 100%;
+}
+
+#track-name,
+#track-artist {
+  display: none;
+}
+#track-info-repeater {
+  color: rgba(0, 0, 0, 1);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: content-box;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 120s;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(-26.2%);
+  }
+  100% {
+    transform: translateX(-76.4%);
+  }
+}
