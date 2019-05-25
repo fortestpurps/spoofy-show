@@ -38,10 +38,10 @@ The following two steps and spotify authorization only have to happen once. Afte
 
 ## Using with OBS
 
-- With spoofy and spotify running, Open OBS and make a new `Browser` source.
+- With spoofy and spotify running, open OBS and make a new `Browser` source.
 - Set the `URL` to `http://localhost:8888`.
 - To sign into spotify (first time setup), right click on this new source, then click `interact` towards the bottom of the context menu.
-- Once you're in, move, resize and/or crop as needed.
+- Move, resize and/or crop as needed.
 
 ## Super Serious Disclaimer
 
