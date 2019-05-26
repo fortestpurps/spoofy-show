@@ -1,5 +1,3 @@
-## Demo:
-
 [![Demo](readme_img/3-min-setup.jpg)](https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080)
 
 ## First Time Setup:
@@ -34,8 +32,6 @@ The following two steps and spotify authorization only have to happen once. Afte
 
 ![Themes](readme_img/customization.jpg?raw=true)
 
-## Advanced Customization:
-
 [![Customization](readme_img/advanced-customization.jpg)](https://www.youtube.com/watch?v=Jd5vY39jiGQ?vq=hd1080)
 
 ## Using with OBS
@@ -46,8 +42,6 @@ The following two steps and spotify authorization only have to happen once. Afte
 - Move, resize and/or crop as needed.
 
 Note: You only need to sign in once. If you need to clear that to sign in as a different user, you must move or delete this folder to force OBS to make a new cache: `C:\Users\%username%\AppData\Roaming\obs-studio\plugin_config\obs-browser\`
-
-## Demo:
 
 [![OBS](readme_img/using-with-obs.jpg)](https://www.youtube.com/watch?v=h9Q0nQd6leA?vq=hd1080)
 
