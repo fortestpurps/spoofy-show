@@ -1,9 +1,6 @@
 [![Demo](readme_img/3-min-setup.jpg)](https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080)
 
 <br>
-<br>
-<br>
-<br>
 
 ## First Time Setup:
 
