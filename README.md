@@ -58,9 +58,11 @@ The following two steps and spotify authorization only have to happen once. Afte
 - To sign into spotify, right click on this new source, then select `interact` towards the bottom of the context menu. You will only need to do this once.
 - Move, resize and/or crop as needed.
 
-Note: You only need to sign in once. If you need to clear that to sign in as a different user, you must move or delete this folder to force OBS to make a new cache: `C:\Users\%username%\AppData\Roaming\obs-studio\plugin_config\obs-browser\`
-
 [![OBS](readme_img/using-with-obs.jpg)](https://www.youtube.com/watch?v=h9Q0nQd6leA?vq=hd1080)
+
+### Common issues in OBS:
+- If you need to clear the cache to sign in as a different user, you must move or delete this folder: `C:\Users\%username%\AppData\Roaming\obs-studio\plugin_config\obs-browser\`
+- If the song display is stacked or wraps in an odd way, the source width or height may be too small.
 
 <br>
 <br>
