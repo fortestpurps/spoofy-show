@@ -1,8 +1,6 @@
 ## Demo:
 
-[![Video](readme_img/spoofy-video.jpg)](https://www.youtube.com/watch?v=q6wCIXFtSf0?vq=hd1080)
-
-### NOTE: This video is outdated, but still accurate enough to use for the general setup.
+[![Demo](readme_img/3-min-setup.jpg)](https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080)
 
 ## First Time Setup:
 
@@ -20,7 +18,7 @@ The following two steps and spotify authorization only have to happen once. Afte
 ### 2) Install them dependencies...
 
 - Stick node on your machine: https://nodejs.org/en/download/
-- Run `npm i -S cookie-parser cors express querystring request spotify-web-api-node` from inside the folder or `_installDependencies.bat`.
+- Run `npm i -S cookie-parser cors express querystring request spotify-web-api-node` from inside the folder or `_installDependencies.bat`. (This may take a moment)
 
 ## Running the App
 
@@ -36,13 +34,23 @@ The following two steps and spotify authorization only have to happen once. Afte
 
 ![Themes](readme_img/customization.jpg?raw=true)
 
+## Advanced Customization:
+
+[![Customization](readme_img/advanced-customization.jpg)](https://www.youtube.com/watch?v=Jd5vY39jiGQ?vq=hd1080)
+
 ## Using with OBS
 
 - With spoofy and spotify running, open OBS and make a new `Browser` source.
 - Set the `URL` to `http://localhost:8888`.
-- To sign into spotify (first time setup), right click on this new source, then click `interact` towards the bottom of the context menu.
+- To sign into spotify, right click on this new source, then select `interact` towards the bottom of the context menu. You will only need to do this once.
 - Move, resize and/or crop as needed.
 
-## Super Serious Disclaimer
+Note: You only need to sign in once. If you need to clear that to sign in as a different user, you must move or delete this folder to force OBS to make a new cache: `C:\Users\%username%\AppData\Roaming\obs-studio\plugin_config\obs-browser\`
+
+## Demo:
+
+[![OBS](readme_img/using-with-obs.jpg)](https://www.youtube.com/watch?v=h9Q0nQd6leA?vq=hd1080)
+
+### Super Serious Disclaimer
 
 I'm happy to help troubleshoot things, but can't be held responsible if you managed to explode your computer, delete the internet, incur the wrath of spotify, etc... Use at your own risk, and most importantly, enjoy. :)
