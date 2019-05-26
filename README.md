@@ -16,12 +16,17 @@ The following two steps and spotify authorization only have to happen once. Afte
 - Stick node on your machine: https://nodejs.org/en/download/
 - Run `npm i -S cookie-parser cors express querystring request spotify-web-api-node` from inside the folder or `_installDependencies.bat`. (This may take a moment)
 
+<br>
+<br>
+<br>
+<br>
+
 ## Running the App
 
 - Make sure you have a song playing (or paused) on your Spotify account.
 - Run `node spoofy.js` from inside the folder or `_startSpoofy.bat`.
 - Pop open your browser and visit http://localhost:8888
-- First time will direct you to log in and authorize.
+- First time will direct you to authorize with spotify.
 
 [![Demo](readme_img/3-min-setup.jpg)](https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080)
 
