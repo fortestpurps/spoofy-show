@@ -1,5 +1,3 @@
-[![Demo](readme_img/3-min-setup.jpg)](https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080)
-
 ## First Time Setup:
 
 The following two steps and spotify authorization only have to happen once. After that, you can start the app by running `node spoofy.js` or `_startSpoofy.bat`.
@@ -24,6 +22,8 @@ The following two steps and spotify authorization only have to happen once. Afte
 - Run `node spoofy.js` from inside the folder or `_startSpoofy.bat`.
 - Pop open your browser and visit http://localhost:8888
 - First time will direct you to log in and authorize.
+
+[![Demo](readme_img/3-min-setup.jpg)](https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080)
 
 ##
 ##
