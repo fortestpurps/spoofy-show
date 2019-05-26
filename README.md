@@ -25,10 +25,10 @@ The following two steps and spotify authorization only have to happen once. Afte
 
 [![Demo](readme_img/3-min-setup.jpg)](https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080)
 
-#
-#
-#
-#
+<br>
+<br>
+<br>
+<br>
 ## Customizing
 
 - I've included a few theme files which can be swapped out in `public/index.html`.
@@ -38,10 +38,10 @@ The following two steps and spotify authorization only have to happen once. Afte
 
 [![Customization](readme_img/advanced-customization.jpg)](https://www.youtube.com/watch?v=Jd5vY39jiGQ?vq=hd1080)
 
-#
-#
-#
-#
+<br>
+<br>
+<br>
+<br>
 ## Using with OBS
 
 - With spoofy and spotify running, open OBS and make a new `Browser` source.
@@ -53,10 +53,10 @@ Note: You only need to sign in once. If you need to clear that to sign in as a d
 
 [![OBS](readme_img/using-with-obs.jpg)](https://www.youtube.com/watch?v=h9Q0nQd6leA?vq=hd1080)
 
-#
-#
-#
-#
+<br>
+<br>
+<br>
+<br>
 ### Super Serious Disclaimer
 
 I'm happy to help troubleshoot things, but can't be held responsible if you managed to explode your computer, delete the internet, incur the wrath of spotify, etc... Use at your own risk, and most importantly, enjoy. :)
