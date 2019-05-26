@@ -25,6 +25,8 @@ The following two steps and spotify authorization only have to happen once. Afte
 
 [![Demo](readme_img/3-min-setup.jpg)](https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080)
 
+<a href="https://www.youtube.com/watch?v=uRdFTjPAMp8?vq=hd1080" target="_blank">[![Demo](readme_img/3-min-setup.jpg)]</a>
+
 <br>
 <br>
 <br>
