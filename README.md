@@ -7,8 +7,9 @@
 The following two steps and spotify authorization only have to happen once. After that, you can start the app by running `node spoofy.js` or `_startSpoofy.bat`.
 
 
-### 0) Make sure you've got spotify installed.
-This app is designed to show spotify contents in a web browser or obs stream. So you'll want to grab that before you get started:https://www.spotify.com/us/download/other/ 
+### 0) Make sure you use Spotify.
+
+This app is designed to show spotify content in a web browser or obs stream.
 
 ### 1) Inject your unique bits.
 
